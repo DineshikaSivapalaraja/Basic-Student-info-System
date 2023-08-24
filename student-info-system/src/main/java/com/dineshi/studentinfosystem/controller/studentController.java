@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Student")
+@CrossOrigin
 public class studentController {
     @Autowired
     private studentService StudentService;
@@ -23,7 +24,7 @@ public class studentController {
         return "New student is added";
     }
 
-        //Get values from Database
+    //Get values from Database
     @GetMapping("/getAll")  //get all students details from database
     public List<student> getAllstudents(){
         return StudentService.getAllstudents();
