@@ -51,9 +51,9 @@ public class studentServiceImplementation implements studentService {
             default:
                 throw new IllegalArgumentException("Invalid attribute name: " + attributeName);
         }
-
         StudentRepository.save(existingStudent);
     }
+
     //Method 02-----------------//update total details of a particular student
 
     // @Override  //update total details of a particular student
@@ -75,5 +75,8 @@ public class studentServiceImplementation implements studentService {
         StudentRepository.deleteById(id);
     }
 
-
+//    @Override   //remove one student from database
+//    public void deleteStudentById(String stu_id) {
+//        StudentRepository.deleteById(Integer.valueOf(stu_id));
+//    }
 }
